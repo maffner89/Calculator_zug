@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="{DynamicResource r_Calculator}" Height="450" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="0,0,-0.4,0" Source="bAO1R2RroyQ.jpg" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbA" HorizontalAlignment="Left" Height="23" Margin="91,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <TextBox x:Name="tbB" HorizontalAlignment="Left" Height="23" Margin="303,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="49,261,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Sum_Click"/>
+        <Button Content="ー" HorizontalAlignment="Left" Margin="49,326,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Minus_Click"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="155,261,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Multi_Click"/>
+        <Button Content="/" HorizontalAlignment="Left" Margin="155,326,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Divide_Click"/>
+        <Button Content="Sin(A)" HorizontalAlignment="Left" Margin="673,261,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Sin_Click"/>
+        <Button Content="Cos(A)" HorizontalAlignment="Left" Margin="673,326,0,0" VerticalAlignment="Top" Width="82" Height="35" FontSize="16" Click="Cos_Click"/>
+        <TextBox  x:Name="Result" HorizontalAlignment="Left" Height="23" Margin="510,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16" IsReadOnly="True"/>
+        <Label Content="A" HorizontalAlignment="Left" Height="30" Margin="143,17,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.52,-0.393" FontSize="16"/>
+        <Label Content="B" HorizontalAlignment="Left" Height="30" Margin="350,17,0,0" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.52,-0.393" FontSize="16"/>
+        <Label Content="{DynamicResource r_result}" HorizontalAlignment="Left" Height="30" Margin="528,17,0,0" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.52,-0.393" FontSize="16"/>
+
+        <ComboBox x:Name="cbLang" SelectedIndex="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbLanguage_SelectionChanged">
+            <ComboBoxItem Name="cbiRu" Content="{DynamicResource r_Russian}" Tag="ru-RU"/>
+            <ComboBoxItem Name="cbiEn" Content="{DynamicResource r_English}" Tag="en-US"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
